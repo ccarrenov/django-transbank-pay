@@ -24,7 +24,7 @@ source ../develpoment/bin/activate
 
 # CONFIG setting.py
 
-__________________________________
+```python
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bazarw_front_end',
 ]
-__________________________________
+```
 
 #  GENERATE requirements.txt
 
