@@ -49,11 +49,17 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'bazarw_front_end.urls'
+PARENT_TEMPLATE = os.path.join(BASE_DIR, 'bazarw_front_end', 'template', 'parent')
+ROOT_TEMPLEATE = os.path.join(BASE_DIR, 'bazarw_front_end', 'template')
+
+print('ROOT_URLCONF: {0}'.format(ROOT_URLCONF))
+print('PARENT_TEMPLATE: {0}'.format(PARENT_TEMPLATE))
+print('ROOT_TEMPLEATE: {0}'.format(ROOT_TEMPLEATE))
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'bazarw_front_end', 'template', 'parent'), os.path.join(BASE_DIR, 'bazarw_front_end', 'template')],
+        'DIRS': [PARENT_TEMPLATE, ROOT_TEMPLEATE],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
