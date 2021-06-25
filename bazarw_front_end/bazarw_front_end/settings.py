@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-r#*u$dkmq1ut_0e8-^2njems_p&@0_@gp593-zh_)@s3p^go6*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://django-transbank-pay.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['django-transbank-pay.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
