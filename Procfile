@@ -1,1 +1,1 @@
-declares types -> web
+web: gunicorn bazarw_front_end.wsgi
