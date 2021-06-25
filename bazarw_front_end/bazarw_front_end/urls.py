@@ -20,7 +20,7 @@ from bazarw_front_end.views.cart import cart
 from bazarw_front_end.views.transbankpay import commitpay, webpay_plus_create
 from django.conf.urls.static import static
 from django.conf import settings
-from django.urls import URLPattern
+
 urlpatterns = [
     path('', home),
     path('home/', home),
@@ -28,7 +28,3 @@ urlpatterns = [
     path('commit-pay/', commitpay),
     path('webpay-plus-create/', webpay_plus_create),  
 ] +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
-for ulr in urlpatterns:
-
-    print('ulr: {0}'.format(ulr.pattern))
