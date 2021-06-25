@@ -1,6 +1,7 @@
 # INSTALL VIRTUALENV
-
+```terminal
 pip install virtualenv
+```
 
 # CREATE VIRTUAL ENV development
 
