@@ -19,7 +19,7 @@ Clave:          123
 
 ![alt text](img/tarjetas_test_transkbank.png)
 
-# PAY FLOW
+# PAY FLOW AUTHORIZED
 
 ![alt text](img/cart.png)
 
