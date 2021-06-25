@@ -1,1 +1,1 @@
-Procfile declares types -> web
+declares types -> web
