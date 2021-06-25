@@ -32,9 +32,8 @@ def deploy_mode():
         print('DJANGO_SETTINGS_MODULE: {0}'.format(dev_settings))
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', dev_settings)
 
-    if mode is None and mode == prod:
+    if mode is not None and mode == prod:
         print('settins mode: {0}'.format(prod))
-        print('DJANGO_SETTINGS_MODULE: {0}'.format(prod_settings))
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', prod_settings)
 
 if __name__ == '__main__':
