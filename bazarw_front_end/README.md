@@ -4,24 +4,29 @@ pip install virtualenv
 ```
 
 # CREATE VIRTUAL ENV development
-
+```terminal
 virtualenv develpoment
+```
 
 # LOAD VIRTUALENV development
-
+```terminal
 source develpoment/bin/activate
+```
 
 # INSTALL DJANGO, RESTFRAMEWORK, MYSQLCLIENT IN VIRTUAL ENV JSONSCHEMA
-
+```terminal
 pip install Django djangorestframework transbank-sdk
+```
 
 # CREATE PROJECT bazarws
-
+```terminal
 django-admin startproject bazarw_front_end
+```
 
 # LOAD VIRTUALENV development IN VSCODE
-
+```terminal
 source ../develpoment/bin/activate
+```
 
 # CONFIG setting.py
 
@@ -38,9 +43,11 @@ INSTALLED_APPS = [
 ```
 
 #  GENERATE requirements.txt
-
+```terminal
 pip freeze > requirements.txt
+```
 
 # INSTALL FROM requirements.txt FILE
-
+```terminal
 pip install -r requirements.txt
+```
