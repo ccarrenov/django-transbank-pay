@@ -10,3 +10,4 @@ requests==2.25.1
 sqlparse==0.4.1
 transbank-sdk==1.5.0
 urllib3==1.26.6
+whitenoise==5.2.0
