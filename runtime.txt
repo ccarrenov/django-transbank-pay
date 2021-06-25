@@ -1,0 +1,3 @@
+cd bazarw_front_end
+pip freeze > requirements.txt
+
