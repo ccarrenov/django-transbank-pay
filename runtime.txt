@@ -1,3 +1,1 @@
-cd bazarw_front_end
-pip freeze > requirements.txt
-
+Python 3.9.5
