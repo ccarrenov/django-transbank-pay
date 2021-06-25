@@ -27,7 +27,7 @@ urlpatterns = [
     path('cart/', cart),
     path('commit-pay/', commitpay),
     path('webpay-plus-create/', webpay_plus_create),  
-] +static(settings.STATIC_URL, document_root=settings.STATIC_URL)
+] +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 for ulr in urlpatterns:
 

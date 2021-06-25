@@ -51,3 +51,25 @@ pip freeze > requirements.txt
 ```terminal
 pip install -r requirements.txt
 ```
+
+# PROD CONFIG
+
+Add environment DEPLOY_MODE
+
+```terminal
+export DEPLOY_MODE=PROD
+```
+
+# DEPLOY IN MODE PROD
+
+Execute command for generate staticfiles
+
+```terminal
+python bazarw_front_end/manage.py collectstatic --noinput
+```
+
+Execute command for deploy local server
+
+```terminal
+python bazarw_front_end/manage.py runserver
+```

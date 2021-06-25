@@ -27,14 +27,13 @@ def deploy_mode():
     prod_settings = 'bazarw_front_end.deploy.prod.settings'
     prod = 'PROD'
 
-    if mode is None:
-        print('settins mode: DEFAULT')
+    if mode is not None and mode == prod:
+        print('settings mode: {0}'.format(prod))
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', prod_settings)
+    else:
+        print('settings mode: DEFAULT')
         print('DJANGO_SETTINGS_MODULE: {0}'.format(dev_settings))
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', dev_settings)
-
-    if mode is not None and mode == prod:
-        print('settins mode: {0}'.format(prod))
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', prod_settings)
 
 if __name__ == '__main__':
     main()

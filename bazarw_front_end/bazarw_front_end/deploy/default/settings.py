@@ -25,6 +25,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+PROJECT_NAME = 'bazarw_front_end'
+
 
 # Application definition
 
@@ -49,12 +51,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'bazarw_front_end.urls'
-PARENT_TEMPLATE = os.path.join(BASE_DIR, 'bazarw_front_end', 'template', 'parent')
-ROOT_TEMPLEATE = os.path.join(BASE_DIR, 'bazarw_front_end', 'template')
-
-print('ROOT_URLCONF: {0}'.format(ROOT_URLCONF))
-print('PARENT_TEMPLATE: {0}'.format(PARENT_TEMPLATE))
-print('ROOT_TEMPLEATE: {0}'.format(ROOT_TEMPLEATE))
+PARENT_TEMPLATE = os.path.join(BASE_DIR, PROJECT_NAME, 'template', 'parent')
+ROOT_TEMPLEATE = os.path.join(BASE_DIR, PROJECT_NAME, 'template')
 
 TEMPLATES = [
     {

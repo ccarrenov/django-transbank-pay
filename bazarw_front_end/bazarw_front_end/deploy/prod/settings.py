@@ -29,6 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
+PROJECT_NAME = 'bazarw_front_end'
 
 # Application definition
 
@@ -39,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bazarw_front_end',
+    PROJECT_NAME,
 ]
 
 MIDDLEWARE = [
@@ -50,15 +51,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-ROOT_URLCONF = 'bazarw_front_end.urls'
-PARENT_TEMPLATE = os.path.join(BASE_DIR, 'bazarw_front_end', 'template', 'parent')
-ROOT_TEMPLEATE = os.path.join(BASE_DIR, 'bazarw_front_end', 'template')
 
-print('ROOT_URLCONF: {0}'.format(ROOT_URLCONF))
-print('PARENT_TEMPLATE: {0}'.format(PARENT_TEMPLATE))
-print('ROOT_TEMPLEATE: {0}'.format(ROOT_TEMPLEATE))
+ROOT_URLCONF = 'bazarw_front_end.urls'
+PARENT_TEMPLATE = os.path.join(BASE_DIR, PROJECT_NAME, 'template', 'parent')
+ROOT_TEMPLEATE = os.path.join(BASE_DIR, PROJECT_NAME, 'template')
 
 TEMPLATES = [
     {
@@ -129,7 +128,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, PROJECT_NAME, 'static'),
+)
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
