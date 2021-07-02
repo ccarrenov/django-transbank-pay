@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from bazarw_front_end.views.home import home
-from bazarw_front_end.views.cart import cart
-from bazarw_front_end.views.transbankpay import commitpay, webpay_plus_create
+from bazar_transbank.views.home import home
+from bazar_transbank.views.cart import cart
+from bazar_transbank.views.transbankpay import commitpay, webpay_plus_create
 from django.conf.urls.static import static
 from django.conf import settings
 import os

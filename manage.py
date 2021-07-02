@@ -6,8 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-
-    deploy_mode()
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bazar_transbank.settings')
     
     try:
         from django.core.management import execute_from_command_line
@@ -18,22 +17,6 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
-
-def deploy_mode():
-
-    mode = os.getenv('DEPLOY_MODE')
-    print('mode: {0}'.format(mode))
-    dev_settings = 'bazarw_front_end.deploy.default.settings'
-    prod_settings = 'bazarw_front_end.deploy.prod.settings'
-    prod = 'PROD'
-
-    if mode is not None and mode == prod:
-        print('settings mode: {0}'.format(prod))
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', prod_settings)
-    else:
-        print('settings mode: DEFAULT')
-        print('DJANGO_SETTINGS_MODULE: {0}'.format(dev_settings))
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', dev_settings)
 
 if __name__ == '__main__':
     main()
