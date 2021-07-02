@@ -1,1 +1,1 @@
-web: gunicorn bazarw_front_end.wsgi --log-file -
+web: gunicorn bazarw_front_end/bazarw_front_end.wsgi
