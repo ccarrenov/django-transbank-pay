@@ -21,3 +21,10 @@ def data_bases(mode, base_dir):
         return prod.data_bases(base_dir)       
     else:
         return dev.data_bases(base_dir)
+
+def middleware(mode):
+
+    if mode == PROD:
+        return prod.middleware()  
+    else:
+        return dev.middleware()       
