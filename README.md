@@ -17,18 +17,18 @@ Rut:            11.111.111-1
 
 Clave:          123
 
-![alt text](img/tarjetas_test_transkbank.png)
+![alt text](doc/img/tarjetas_test_transkbank.png)
 
 # PAY FLOW AUTHORIZED
 
-![alt text](img/cart.png)
+![alt text](doc/img/cart.png)
 
-![alt text](img/tbk-wepay.png)
+![alt text](doc/img/tbk-wepay.png)
 
-![alt text](img/tbk-wepay-2.png)
+![alt text](doc/img/tbk-wepay-2.png)
 
-![alt text](img/tbk-wepay-3.png)
+![alt text](doc/img/tbk-wepay-3.png)
 
-![alt text](img/tbk-wepay-4.png)
+![alt text](doc/img/tbk-wepay-4.png)
 
-![alt text](img/success-pay.png)
+![alt text](doc/img/success-pay.png)
