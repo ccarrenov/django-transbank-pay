@@ -52,6 +52,11 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
 
+# MIGRATION SQLITE
+python manage.py makemigrations
+python manage.py migrate
+
+
 # PROD CONFIG
 
 Add environment DEPLOY_MODE

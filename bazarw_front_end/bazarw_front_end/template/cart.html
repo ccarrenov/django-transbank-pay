@@ -23,7 +23,7 @@
         <td>{{product.price}}</td>
         {% endfor %}        
       </tr>
-      <form id='frm-pay' name="pay" action="/webpay-plus-create" method="GET">{% csrf_token %}
+      <form id='frm-pay' name="pay" action="/webpay-plus-create" method="POST">{% csrf_token %}
       <tr>
         <td></td>
         <td><strong>Total</strong></td>
