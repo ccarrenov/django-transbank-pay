@@ -20,6 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 PROD = 'PROD'
 
 mode = os.getenv('DEPLOY_MODE')
+
+if mode is None:
+    mode = 'DEFAULT'
+
 print('mode: {0}'.format(mode))
 
 # Quick-start development settings - unsuitable for production
